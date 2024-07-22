@@ -4,6 +4,7 @@ Made with PyGame
 """
 
 import pygame, sys, time, random
+from pygame import mixer
 
 
 # Difficulty settings
@@ -17,6 +18,16 @@ difficulty = 25
 # Window size
 frame_size_x = 720
 frame_size_y = 480
+
+#background music
+pygame.init()
+bgm_music = mixer.music.load("bgm.mp3")
+consume_sound = mixer.Sound("consume_sound.mp3")
+game_over_sound = mixer.Sound("game_over.mp3")
+mixer.music.play(-1)  # -1 makes the music loop indefinitely
+
+
+
 
 # Checks for errors encountered
 check_errors = pygame.init()
@@ -61,6 +72,8 @@ score = 0
 
 # Game Over
 def game_over():
+    mixer.music.stop()
+    game_over_sound.play()
     my_font = pygame.font.SysFont('times new roman', 90)
     game_over_surface = my_font.render('Gameover', True, red)
     game_over_rect = game_over_surface.get_rect()
@@ -72,7 +85,10 @@ def game_over():
     time.sleep(3)
     pygame.quit()
     sys.exit()
-
+    # Pause to show game over screen
+    time.sleep(3)
+    pygame.quit()
+    sys.exit()
 
 # Score
 def show_score(choice, color, font, size):
@@ -133,6 +149,8 @@ while True:
     if snake_pos[0] == food_pos[0] and snake_pos[1] == food_pos[1]:
         score += 1
         food_spawn = False
+        consume_sound.play()
+
     else:
         snake_body.pop()
 
@@ -168,3 +186,6 @@ while True:
     pygame.display.update()
     # Refresh rate
     fps_controller.tick(difficulty)
+
+
+
