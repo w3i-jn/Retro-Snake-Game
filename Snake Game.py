@@ -19,15 +19,42 @@ difficulty = 25
 frame_size_x = 720
 frame_size_y = 480
 
+# Starting Pygame and setting up the screen
+pygame.init()
+screen = pygame.display.set_mode((frame_size_x, frame_size_y))
+pygame.display.set_caption('Snake Eater')
+text_font = pygame.font.SysFont("Helvetica", 30)
+
+# Function to draw text on the screen
+def draw_text(text, font, text_col, x, y):
+    img = font.render(text, True, text_col)
+    screen.blit(img, (x, y))
+
+# Main starting screen loop
+run = True
+while run:
+    screen.fill((0, 0, 0))
+    draw_text("Snake Game", text_font, (255, 255, 255), 270, 100)
+    draw_text("Control:", text_font, (255, 255, 255), 270, 200 )
+    draw_text("Use Arrow Key To Move", text_font, (255, 255, 255), 270, 250)
+    draw_text("Press any key to start", text_font, (255, 255, 255), 270, 400)
+
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+            run = False 
+        if event.type == pygame.QUIT:
+            run = False
+
+    pygame.display.flip()
+
+pygame.quit()
+
 #background music
 pygame.init()
 bgm_music = mixer.music.load("bgm.mp3")
 consume_sound = mixer.Sound("consume_sound.mp3")
 game_over_sound = mixer.Sound("game_over.mp3")
 mixer.music.play(-1)  # -1 makes the music loop indefinitely
-
-
-
 
 # Checks for errors encountered
 check_errors = pygame.init()
@@ -186,6 +213,3 @@ while True:
     pygame.display.update()
     # Refresh rate
     fps_controller.tick(difficulty)
-
-
-
