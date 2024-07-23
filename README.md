@@ -24,8 +24,8 @@ The rest of the code is properly commented and self explanatory. Tweaks can be m
 
 ## Screenshots
 
-![1](https://user-images.githubusercontent.com/32998741/33873439-27f635b2-df45-11e7-8fc1-f7812f17447a.png)
-*Written using PyCharm*
+![1](https://github.com/user-attachments/assets/0dd91d66-3f51-42b3-83ac-556006f48339)
+*Written using Visual Studio Code*
 
 ![2](https://github.com/user-attachments/assets/d9017e08-8570-4afa-80b3-d43c112a1211)
 *Starting screen*
