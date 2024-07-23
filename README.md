@@ -30,7 +30,8 @@ The rest of the code is properly commented and self explanatory. Tweaks can be m
 ![2](https://user-images.githubusercontent.com/32998741/33873437-2780ed2a-df45-11e7-9776-b1f151fa4e02.png)
 *Active game screen*
 
-![3](https://files.fm/u/fbeq83vb6p)
+![3](https://github.com/user-attachments/assets/4375bc0d-7378-4a9a-b5d7-f12678a99f0d)
+
 *Game over screen*
 
 
