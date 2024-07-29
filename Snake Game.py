@@ -43,10 +43,10 @@ def show_start_screen():
 
 # Background music
 def load_sounds():
-    mixer.music.load("bgm.mp3")
+    mixer.music.load("Assets/bgm.mp3")
     global consume_sound, game_over_sound
-    consume_sound = mixer.Sound("consume_sound.mp3")
-    game_over_sound = mixer.Sound("game_over.mp3")
+    consume_sound = mixer.Sound("Assets/consume_sound.mp3")
+    game_over_sound = mixer.Sound("Assets/game_over.mp3")
     mixer.music.play(-1)  # -1 makes the music loop indefinitely
 
 # Game Over function with restart and quit options
