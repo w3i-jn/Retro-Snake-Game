@@ -43,10 +43,7 @@ The rest of the code is properly commented and self explanatory. Tweaks can be m
 
 
 ## Creditor
-
 * **Rajat Dipta Biswas**
-
-See also the list of [contributors](https://github.com/rajatdiptabiswas/snake-pygame/graphs/contributors) who participated in this project.
 
 ## Acknowledgements
 * [Pygame Documentations](https://www.pygame.org/docs/)
